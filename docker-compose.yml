@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    image: webdevops/php-apache-dev:7.2
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html
+      WEB_DOCUMENT_INDEX: index.php
+      WEB_ALIAS_DOMAIN: localhost
